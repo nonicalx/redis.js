@@ -11,7 +11,7 @@ function convertToJSON(dataSample) {
            
  
            
-            jsonObject += {...jsonObject, ...pair}
+            jsonObject = {...jsonObject, ...pair}
           
         }
     }
