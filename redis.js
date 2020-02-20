@@ -7,15 +7,16 @@ function convertToJSON(dataSample) {
     log("array", sampleArr)
     for (let i = 0; i < sampleArr.length; i++) {
         if (i % 2 == 0) {
-            pair = `{${sampleArr[i]}:${sampleArr[i + 1]}}`;
-            // log(pair)
-            var test = Object.assign({}, pair)
-            log(test)
-            // jsonObject += jsonObject??
-            // jsonObject;
+            pair = {[sampleArr[i]]:sampleArr[i + 1]};
+           
+ 
+           
+            jsonObject += {...jsonObject, ...pair}
+          
         }
     }
-    // log("pair", jsonObject)
+    log("Resulting object:", jsonObject)
+    return(jsonObject)
 }
 
 convertToJSON(sample)
